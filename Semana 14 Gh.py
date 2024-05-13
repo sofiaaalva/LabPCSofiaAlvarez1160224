@@ -1,0 +1,25 @@
+import random
+print("Semana No. 16: Ejercicio 1")
+arreglo = [random.randint(0, 1000) for _ in range(10)]
+print("Números ingresados:", arreglo)
+promedio = sum(arreglo) / len(arreglo)
+print(f"Promedio del arreglo: {promedio:.2f}")
+longitud = len(arreglo)
+print(f"Longitud del arreglo: {longitud}")
+suma_pares = sum(arreglo[i] for i in range(longitud) if i % 2 == 0)
+suma_impares = sum(arreglo[i] for i in range(longitud) if i % 2 != 0)
+print(f"Suma de posiciones pares: {suma_pares}")
+print(f"Suma de posiciones impares: {suma_impares}")
+print("Semana No. 16: Ejercicio 2")
+filas = int(input("Ingrese la cantidad de filas: "))
+columnas = int(input("Ingrese la cantidad de columnas: "))
+matriz = [[random.randint(0, 1000) for _ in range(columnas)] for _ in
+range(filas)]
+numeros_pares = sum(1 for fila in matriz for num in fila if num % 2 == 0)
+numeros_impares = sum(1 for fila in matriz for num in fila if num % 2 != 0)
+numero_mayor = max(max(fila) for fila in matriz)
+numero_menor = min(min(fila) for fila in matriz)
+print(f"Cantidad de números pares: {numeros_pares}")
+print(f"Cantidad de números impares: {numeros_impares}")
+print(f"Número mayor: {numero_mayor}")
+print(f"Número menor: {numero_menor}")
